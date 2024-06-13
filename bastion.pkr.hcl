@@ -21,7 +21,7 @@ source "amazon-ebs" "generic_bastion" {
     Name = "packer-bastion-builder"
     deploy_to_all_environments = var.deploy_to_all_environments
   }
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   region        = "eu-west-2"
   source_ami_filter {
     filters = {
