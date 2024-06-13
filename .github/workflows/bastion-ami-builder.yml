@@ -23,6 +23,12 @@ jobs:
           role-to-assume: arn:aws:iam::683290208331:role/GitHubWorkflow
           role-session-name: GitHubWorkflow
 
+      - name: Setup `packer`
+        uses: hashicorp/setup-packer@main
+        id: setup
+        with:
+          version: "1.11.0"
+
       - name: Packer Init
         run: |
           packer init .
