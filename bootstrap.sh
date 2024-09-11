@@ -14,4 +14,4 @@ sudo apt-get install dnsutils -y
 sudo apt-get install traceroute -y
 sudo snap install dnslookup
 
-sudo apt install mariadb-client-core-10.6 -y
+sudo apt install mysql-client-core-8.0 -y
