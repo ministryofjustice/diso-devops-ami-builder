@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "generic_bastion" {
-  ami_name      = "diso-devops/bastion/ubuntu-jammy-22.04-amd64-server-generic-{{ timestamp }}"
+  ami_name      = "diso-devops/bastion/ubuntu-jammy-22.04-amd64-server-generic"
   tags = {
     Name        = "diso-devops/bastion/ubuntu-jammy-22.04-amd64-server-generic-{{ timestamp }}"
 }
