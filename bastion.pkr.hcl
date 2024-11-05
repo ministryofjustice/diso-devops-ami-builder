@@ -8,10 +8,12 @@ packer {
 }
 
 source "amazon-ebs" "generic_bastion" {
-  ami_name      = "diso-devops/bastion/ubuntu-jammy-22.04-amd64-server-generic-{{ timestamp }}"
+  ami_name              = "diso-devops/bastion/ubuntu-jammy-22.04-amd64-server-generic"
+  force_deregister      = true
+  force_delete_snapshot = true
   tags = {
     Name        = "diso-devops/bastion/ubuntu-jammy-22.04-amd64-server-generic-{{ timestamp }}"
-}
+  }
   ami_users = [
     "037161842252",
     "068084030754",
