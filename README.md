@@ -18,3 +18,9 @@ Allowed Values: `False`,`True`
 Default: `False`
 
 Description: Used to prevent a test / development bastion from being deployed to all environments.
+
+## Upgrade
+To manage the lifecycle of AMIs, the `force_deregister` and `force_delete_snapshot` is set to `true`. This is to force Packer to first deregister an existing AMI and delete 
+associated snapshots if an AMI with the same name already exists.
+
+When upgrading the AMI under `source_ami_filter` make sure to update the `ami_name`. This will ensure a new AMI is created keeping the old one as a backup.
